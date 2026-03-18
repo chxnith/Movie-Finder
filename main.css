@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root{
+    --panel: rgba(20, 0, 0, 0.56);
+    --panel-strong: rgba(28, 0, 0, 0.76);
+    --stroke: rgba(255, 255, 255, 0.12);
+    --text: #f7efef;
+    --muted: #dccbcb;
+    --accent: #ffce4f;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    color: var(--text);
+    background-color: #5a0000;
+}
+
+#particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#particles-js canvas{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper .container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+.logo{
+    padding: 1.2rem 0;
+    background: linear-gradient(180deg, rgba(34, 0, 0, 0.8), rgba(24, 0, 0, 0.7));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+}
+
+.logo-brand{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.logo-image{
+    width: clamp(56px, 6vw, 82px);
+    height: auto;
+    opacity: 0.64;
+    filter: brightness(0) invert(1) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+}
+
+.logo p{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    color: transparent;
+    background-image: linear-gradient(115deg, rgba(232, 252, 255, 0.38), rgba(174, 234, 255, 0.2), rgba(214, 246, 255, 0.38));
+    background-size: 220% 220%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+        background-clip: text;
+    -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px rgba(186, 233, 255, 0.14);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 12px rgba(146, 223, 255, 0.14);
+        -webkit-filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.14));
+            filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.14));
+    cursor: default;
+    -webkit-transition: -webkit-filter 240ms ease;
+    transition: -webkit-filter 240ms ease;
+    -o-transition: filter 240ms ease;
+    transition: filter 240ms ease;
+    transition: filter 240ms ease, -webkit-filter 240ms ease;
+}
+
+.logo p span{
+    color: var(--accent);
+}
+
+
+.search-container{
+    max-width: 1040px;
+    margin: 2.2rem auto 0;
+    border: 1px solid var(--stroke);
+    border-radius: 22px;
+    padding: 2.2rem 1.2rem;
+    background: linear-gradient(145deg, rgba(48, 0, 0, 0.55), rgba(14, 0, 0, 0.65));
+    -webkit-box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.search-element{
+    width: min(760px, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+}
+
+.search-element h3{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.95rem);
+    letter-spacing: -0.02em;
+    color: #fff8f8;
+}
+
+.search-element .form-control{
+    width: 100%;
+    border: 1px solid rgba(185, 236, 255, 0.34);
+    border-radius: 999px;
+    background: linear-gradient(145deg, rgba(232, 249, 255, 0.34), rgba(180, 227, 255, 0.18));
+    color: #f3fbff;
+    font-size: 1.06rem;
+    font-weight: 600;
+    padding: 0.95rem 1.25rem;
+    outline: none;
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+            backdrop-filter: blur(10px) saturate(140%);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 22px rgba(0, 0, 0, 0.18);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 22px rgba(0, 0, 0, 0.18);
+    -webkit-transition: -webkit-box-shadow 240ms ease, -webkit-transform 240ms ease;
+    transition: -webkit-box-shadow 240ms ease, -webkit-transform 240ms ease;
+    -o-transition: box-shadow 240ms ease, transform 240ms ease;
+    transition: box-shadow 240ms ease, transform 240ms ease;
+    transition: box-shadow 240ms ease, transform 240ms ease, -webkit-box-shadow 240ms ease, -webkit-transform 240ms ease;
+}
+
+.search-element .form-control:focus{
+    border-color: rgba(142, 221, 255, 0.58);
+    -webkit-box-shadow: 0 14px 28px rgba(36, 130, 179, 0.24);
+            box-shadow: 0 14px 28px rgba(36, 130, 179, 0.24);
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+}
+
+.search-element .form-control:focus-visible{
+    outline: none;
+}
+
+.search-element .form-control::placeholder{
+    color: rgba(236, 251, 255, 0.82);
+}
+
+.search-list{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+    width: 100%;
+    max-height: 340px;
+    overflow-y: auto;
+    z-index: 10;
+    background: rgba(22, 0, 0, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.33);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.33);
+}
+
+.search-list .search-list-item{
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.65rem 0.8rem;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: background-color 190ms ease, -webkit-transform 190ms ease;
+    transition: background-color 190ms ease, -webkit-transform 190ms ease;
+    -o-transition: background-color 190ms ease, transform 190ms ease;
+    transition: background-color 190ms ease, transform 190ms ease;
+    transition: background-color 190ms ease, transform 190ms ease, -webkit-transform 190ms ease;
+}
+
+.search-list .search-list-item:hover{
+    background-color: rgba(255, 255, 255, 0.08);
+    -webkit-transform: translateX(4px);
+        -ms-transform: translateX(4px);
+            transform: translateX(4px);
+}
+
+.search-list-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.85rem;
+}
+
+.search-item-thumbnail img{
+    width: 46px;
+    height: 68px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
+    margin-right: 0;
+}
+
+.search-item-info h3{
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.search-item-info p{
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+    color: var(--muted);
+    opacity: 1;
+}
+
+.search-list::-webkit-scrollbar{
+    width: 8px;
+}
+
+.search-list::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 206, 79, 0.78);
+    border-radius: 999px;
+}
+
+.hide-search-list{
+    display: none;
+}
+
+.result-container{
+    padding: 2.2rem 0 3rem;
+}
+
+.result-grid{
+    border: 1px solid var(--stroke);
+    border-radius: 24px;
+    background: linear-gradient(160deg, var(--panel), var(--panel-strong));
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+    -webkit-box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
+    padding: 1.2rem;
+    gap: 1.45rem;
+}
+
+.movie-poster img{
+    width: min(100%, 350px);
+    margin: 0 auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    -webkit-box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.movie-info{
+    color: #fff;
+    text-align: left;
+    padding-top: 0.3rem;
+}
+
+.movie-title{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    line-height: 1.14;
+    color: #ffe6a4;
+}
+
+.movie-misc-info{
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0.55rem;
+    padding: 0.95rem 0 1rem;
+}
+
+.movie-misc-info li{
+    font-size: 0.88rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+}
+
+.movie-info .rated{
+    background: rgba(255, 206, 79, 0.22);
+    border-color: rgba(255, 206, 79, 0.52);
+    color: #ffe8ae;
+}
+
+.movie-info .genre{
+    display: inline-block;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 0.45rem 0.6rem;
+}
+
+.movie-info .plot,
+.movie-info .writer,
+.movie-info .actors,
+.movie-info .language,
+.movie-info .awards{
+    color: #f6ecec;
+    margin-top: 0.82rem;
+    line-height: 1.56;
+}
+
+.movie-info .language{
+    color: #ffd777;
+}
+
+.movie-info .awards i{
+    color: #ffd777;
+    margin-right: 0.4rem;
+}
+
+@media(max-width: 560px){
+    .logo{
+        padding: 1rem 0;
+    }
+
+    .search-container{
+        margin-top: 1.3rem;
+        border-radius: 16px;
+        padding: 1.3rem 0.9rem;
+    }
+
+    .search-element h3{
+        font-size: 1.3rem;
+    }
+
+    .search-element .form-control{
+        font-size: 0.98rem;
+        padding: 0.82rem 0.9rem;
+    }
+
+    .movie-misc-info{
+        gap: 0.42rem;
+    }
+}
+
+@media(min-width: 860px){
+    .search-element{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 1rem;
+    }
+
+    .search-element h3{
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .result-grid{
+        display: grid;
+        grid-template-columns: minmax(260px, 360px) 1fr;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
+    }
+}
